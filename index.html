@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora — Modern Product Landing</title>
+  <meta name="description" content="Aurora — modern, responsive product landing page with dark mode, contact form and animations." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Aurora — Modern Product Landing" />
+  <meta property="og:description" content="A clean, responsive template with dark mode and JS interactions." />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Aurora home">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+          <circle cx="12" cy="12" r="10" fill="url(#g)"/>
+          <path d="M8 14c1.5-2 6-2 7.5 0" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <span>Aurora</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <button id="navToggle" class="btn-primary nav-toggle" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Build beautiful products faster.</h1>
+          <p class="hero-lead">Design-first UI components, performance-minded code, and delightful interactions — all ready to plug into your project.</p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#pricing">Get started</a>
+            <a class="btn-ghost" href="#features">See features</a>
+          </div>
+          <ul class="stats" aria-hidden="true">
+            <li><strong>1.2K+</strong> users</li>
+            <li><strong>99.9%</strong> uptime</li>
+            <li><strong>24/7</strong> support</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <!-- Decorative SVG mockup -->
+          <svg viewBox="0 0 600 400" class="mockup" role="img" aria-hidden="true">
+            <defs>
+              <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+              <filter id="f" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="18" result="b"/>
+                <feBlend in="SourceGraphic" in2="b" />
+              </filter>
+            </defs>
+            <rect rx="20" width="560" height="320" x="20" y="20" fill="url(#bg)" opacity="0.95" filter="url(#f)"/>
+            <rect x="70" y="80" width="420" height="220" rx="12" fill="#fff" opacity="0.95"/>
+            <rect x="90" y="100" width="360" height="14" rx="6" fill="#e6eef3"/>
+            <rect x="90" y="130" width="220" height="14" rx="6" fill="#f7fafc"/>
+            <rect x="90" y="160" width="150" height="14" rx="6" fill="#f7fafc"/>
+            <circle cx="420" cy="180" r="36" fill="#06b6d4" opacity="0.95" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Features</h2>
+        <p class="section-sub">Everything you need to ship an exceptional front-end.</p>
+
+        <div class="features-grid">
+          <article class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Performance-first</h3>
+            <p>Optimized CSS and minimal JS keep load times low and Core Web Vitals high.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Design system</h3>
+            <p>Reusable components, consistent spacing, and accessible colour contrasts.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure by default</h3>
+            <p>Sanitized inputs and secure client-side validation to complement server-side checks.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Layouts that adapt gracefully from small screens to large monitors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-sub">A few example projects and mockups.</p>
+
+        <div class="masonry">
+          <!-- Cards with accessible captions -->
+          <figure class="m-card">
+            <div class="m-thumb" role="img" aria-label="Dashboard mockup">
+              <!-- inline placeholder -->
+              <svg viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
+                <rect width="200" height="120" fill="#111827"/>
+                <rect x="12" y="12" width="176" height="22" rx="6" fill="#111827" opacity="0.9"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h4>Analytics Dashboard</h4>
+              <p>Fast insights with curated visualizations.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="m-card">
+            <div class="m-thumb" role="img" aria-label="Mobile app mockup">
+              <svg viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
+                <rect width="200" height="120" fill="#06b6d4"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h4>Mobile App</h4>
+              <p>Native-like performance and responsive layouts.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="m-card">
+            <div class="m-thumb" role="img" aria-label="Landing page">
+              <svg viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
+                <rect width="200" height="120" fill="#7c3aed"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h4>Marketing Landing</h4>
+              <p>Conversion focused components and A/B friendly sections.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-sub">Simple, flexible plans.</p>
+
+        <div class="pricing-grid" role="list">
+          <div class="plan" role="listitem">
+            <h3>Starter</h3>
+            <p class="price">$0 <span>/ month</span></p>
+            <ul class="plan-features">
+              <li>Basic components</li>
+              <li>Community support</li>
+              <li>2 projects</li>
+            </ul>
+            <a class="btn-outline" href="#contact">Sign up</a>
+          </div>
+
+          <div class="plan featured" role="listitem" aria-label="Most popular">
+            <h3>Pro</h3>
+            <p class="price">$19 <span>/ month</span></p>
+            <ul class="plan-features">
+              <li>Full component library</li>
+              <li>Priority support</li>
+              <li>Unlimited projects</li>
+            </ul>
+            <a class="btn-primary" href="#contact">Get Pro</a>
+          </div>
+
+          <div class="plan" role="listitem">
+            <h3>Enterprise</h3>
+            <p class="price">Contact</p>
+            <ul class="plan-features">
+              <li>Custom integrations</li>
+              <li>SLAs & legal</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a class="btn-outline" href="#contact">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section alt">
+      <div class="container">
+        <h2 class="section-title">What people say</h2>
+        <div class="carousel" id="carousel" aria-roledescription="carousel">
+          <div class="slide visible">
+            <blockquote>
+              “Aurora saved our team three weeks of design and engineering time — shipped quickly and looked great.”
+            </blockquote>
+            <cite>— Maya P., Product Lead</cite>
+          </div>
+          <div class="slide">
+            <blockquote>“Lightweight, accessible, and the docs were excellent.”</blockquote>
+            <cite>— Juan R., Frontend Engineer</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Send us a message — we reply within one business day.</p>
+
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required minlength="2" placeholder="Your name" />
+              <span class="error" id="err-name" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              <span class="error" id="err-email" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell us about your project"></textarea>
+              <span class="error" id="err-message" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row actions">
+              <button type="submit" class="btn-primary">Send message</button>
+              <button type="button" id="clearBtn" class="btn-ghost">Clear</button>
+            </div>
+
+            <p class="form-note" id="formStatus" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-aside" aria-hidden="false">
+            <h3>Office</h3>
+            <p>123 Aurora Street<br/>Cairo, Egypt</p>
+            <h4>Email</h4>
+            <p><a href="mailto:hello@aurora.example">hello@aurora.example</a></p>
+            <h4>Phone</h4>
+            <p>+20 100 000 0000</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Aurora — Built with ❤️</p>
+      <div class="social">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+                                                       </html>
